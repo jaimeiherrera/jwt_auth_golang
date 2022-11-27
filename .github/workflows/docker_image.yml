@@ -5,7 +5,7 @@ on:
   pull_request:
     branches: [ "main", "dev" ]
 jobs:
-  build & run:
+  build_&_run:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3

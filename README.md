@@ -8,4 +8,3 @@ Simple JWT authentication app in Go
 - golang.org/x/crypto/bcrypt
 - github.com/golang-jwt/jwt/v4
 - github.com/joho/godotenv
-- github.com/githubnemo/CompileDaemon

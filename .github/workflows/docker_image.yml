@@ -1,0 +1,15 @@
+name: Docker Image CI
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main", "dev" ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag jag_img:$(date -I)
+    - name: Run the Docker image
+      run: docker run --name jag_container -d jag_img:$(date -I)
